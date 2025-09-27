@@ -107,7 +107,7 @@ auto evalMapTrait( const volatile T1&, const volatile T2&, OP ) -> BinaryMapTrai
    };
    \endcode
 */
-template< typename... Args >  // Types of the map template paramters
+template< typename... Args >  // Types of the map template parameters
 struct MapTrait
    : public decltype( evalMapTrait( std::declval<Args&>()... ) )
 {};
@@ -127,7 +127,7 @@ struct MapTrait
    using Type2 = blaze::MapTrait_t<T,OP>;
    \endcode
 */
-template< typename... Args >  // Types of the map template paramters
+template< typename... Args >  // Types of the map template parameters
 using MapTrait_t = typename MapTrait<Args...>::Type;
 //*************************************************************************************************
 
